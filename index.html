@@ -724,6 +724,21 @@ footer{
 .real-mockup-image img{width:100%;height:auto;display:block;transition:transform .5s ease}
 .real-mockup-card:hover .real-mockup-image img{transform:scale(1.025)}
 
+
+/* FINAL HERO + SKILLS UPDATE */
+.hero h1{font-size:clamp(62px,8vw,125px);line-height:.82;letter-spacing:-5px;}
+.skills{background:#0d0d0d;}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.skill-card{background:#121212;border:1px solid #222;padding:30px;transition:.35s;}
+.skill-card:hover{transform:translateY(-6px);border-color:#cfff00;}
+.skill-icon{width:48px;height:48px;border:1px solid #cfff00;color:#cfff00;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;margin-bottom:24px;}
+.skill-level{color:#cfff00;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:10px;}
+.skill-card h3{font-size:22px;margin-bottom:10px;}
+.skill-card p{color:#888;font-size:14px;line-height:1.7;}
+.contact-chip .ico{color:#cfff00;margin-right:7px;font-weight:900;}
+@media(max-width:900px){.hero h1{font-size:clamp(58px,12vw,92px);letter-spacing:-4px}.skills-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero h1{font-size:56px;letter-spacing:-3px}.skills-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 
@@ -740,6 +755,7 @@ footer{
 <li><a href="#home">HOME</a></li>
 <li><a href="#about">ABOUT</a></li>
 <li><a href="#experience">EXPERIENCE</a></li>
+<li><a href="#skills">SKILLS</a></li>
 <li><a href="#services">SERVICES</a></li>
 <li><a href="#work">WORK</a></li>
 <li><a href="#contact">CONTACT</a></li>
@@ -833,13 +849,28 @@ footer{
 </div>
 </section>
 
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+<div class="container">
+<div class="section-label">03 / SKILLS &amp; SOFTWARE</div>
+<h2 class="section-title">TOOLS I USE.</h2>
+<div class="skills-grid">
+<div class="skill-card"><div class="skill-icon">Ps</div><div class="skill-level">ADVANCED</div><h3>Adobe Photoshop</h3><p>Photo retouching, image manipulation, advertising creatives and professional photo editing.</p></div>
+<div class="skill-card"><div class="skill-icon">Ai</div><div class="skill-level">ADVANCED</div><h3>Adobe Illustrator</h3><p>Vector artwork, branding materials, logo work and print-ready graphic design.</p></div>
+<div class="skill-card"><div class="skill-icon">C</div><div class="skill-level">ADVANCED</div><h3>Canva</h3><p>Social media creatives, presentations and promotional visual content.</p></div>
+<div class="skill-card"><div class="skill-icon">Pr</div><div class="skill-level">BASIC</div><h3>Adobe Premiere Pro</h3><p>Basic video editing, trimming, transitions, titles and promotional video work.</p></div>
+</div>
+</div>
+</section>
+
 <!-- SERVICES -->
 
 <section id="services">
 
 <div class="container">
 
-<div class="section-label">03 / WHAT I DO</div>
+<div class="section-label">04 / WHAT I DO</div>
 <h2 class="section-title">SERVICES.</h2>
 
 <div class="services-grid">
@@ -891,7 +922,7 @@ footer{
 
 <div class="container">
 
-<div class="section-label">04 / SELECTED WORK</div>
+<div class="section-label">05 / SELECTED WORK</div>
 <h2 class="section-title">PORTFOLIO.</h2>
 
 <div class="filters">
@@ -1154,17 +1185,17 @@ onclick="openLightbox('shawarma-ad.jpg')">
 
 <section class="contact" id="contact">
 <div class="container">
-    <div class="section-label">05 / CONTACT</div>
+    <div class="section-label">06 / CONTACT</div>
     <h2>LET'S CREATE<br><span>SOMETHING GREAT.</span></h2>
     <p>
     Available for graphic design, photo editing, advertising, branding and creative projects in Dubai and beyond.
     </p>
 
     <div class="contact-links">
-        <a class="contact-chip" href="tel:+971543484963">☎ +971 54 348 4963</a>
-        <a class="contact-chip" href="mailto:subinslm@gmail.com">✉ subinslm@gmail.com</a>
-        <a class="contact-chip" href="https://wa.me/971543484963" target="_blank">WHATSAPP</a>
-        <span class="contact-chip">Dubai, UAE</span>
+        <a class="contact-chip" href="tel:+971543484963"><span class="ico">☎</span>+971 54 348 4963</a>
+        <a class="contact-chip" href="mailto:subinslm@gmail.com"><span class="ico">✉</span>subinslm@gmail.com</a>
+        <a class="contact-chip" href="https://wa.me/971543484963" target="_blank"><span class="ico">◉</span>WHATSAPP</a>
+        <span class="contact-chip"><span class="ico">◆</span>Dubai, UAE</span>
     </div>
 
     <div class="buttons" style="justify-content:center">
