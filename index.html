@@ -158,6 +158,50 @@ nav{
     border-color:#fff;
 }
 
+
+/* ================= HERO UPGRADE ================= */
+.hero-inner{
+    display:grid;
+    grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);
+    gap:55px;
+    align-items:center;
+}
+.hero-copy{min-width:0;}
+.hero-portrait{
+    position:relative;
+    max-width:470px;
+    width:100%;
+    margin-left:auto;
+}
+.hero-portrait:before{
+    content:"";
+    position:absolute;
+    inset:28px -18px -18px 28px;
+    border:1px solid #cfff00;
+    z-index:0;
+}
+.hero-portrait img{
+    position:relative;
+    z-index:1;
+    width:100%;
+    height:min(68vh,680px);
+    object-fit:cover;
+    object-position:center top;
+    filter:grayscale(8%);
+}
+.hero-portrait .portrait-tag{
+    position:absolute;
+    z-index:2;
+    left:-18px;
+    bottom:28px;
+    background:#cfff00;
+    color:#050505;
+    padding:12px 16px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
 /* ================= GENERAL ================= */
 
 section{
@@ -574,6 +618,107 @@ footer{
     }
 }
 
+
+/* ================= EXPERIENCE ================= */
+.experience{background:#080808;}
+.timeline{max-width:1000px;margin:auto;position:relative;}
+.timeline:before{
+    content:"";position:absolute;left:18px;top:5px;bottom:5px;width:1px;background:#303030;
+}
+.exp-item{position:relative;padding:0 0 48px 70px;}
+.exp-item:last-child{padding-bottom:0;}
+.exp-dot{
+    position:absolute;left:10px;top:5px;width:17px;height:17px;border:3px solid #080808;
+    background:#cfff00;box-shadow:0 0 0 1px #cfff00;
+}
+.exp-period{color:#cfff00;font-size:11px;letter-spacing:2px;font-weight:bold;margin-bottom:10px;}
+.exp-item h3{font-size:27px;margin-bottom:7px;}
+.exp-company{color:#ddd;font-weight:bold;margin-bottom:12px;}
+.exp-item p{color:#888;line-height:1.75;max-width:760px;}
+
+/* ================= PROJECT / MOCKUP CARDS ================= */
+.project-categories{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:55px;
+}
+.project-card{
+    min-height:310px;position:relative;overflow:hidden;background:#121212;
+    border:1px solid #222;padding:30px;display:flex;flex-direction:column;justify-content:space-between;
+    transition:.35s;
+}
+.project-card:hover{border-color:#cfff00;transform:translateY(-5px);}
+.project-card small{color:#cfff00;letter-spacing:2px;font-weight:bold;}
+.project-card h3{font-size:28px;margin-top:8px;}
+.project-card p{color:#888;line-height:1.65;max-width:420px;margin-top:10px;}
+.project-card a{font-size:12px;font-weight:bold;color:#fff;}
+.mockup-stage{
+    height:165px;margin:18px 0 24px;position:relative;
+    background:radial-gradient(circle at 50% 40%,#333,#151515 55%,#0d0d0d);
+    border:1px solid #252525;overflow:hidden;
+}
+.logo-mockup:before{
+    content:"PH";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    font-size:72px;font-weight:900;letter-spacing:-6px;color:#d8d8d8;
+    text-shadow:0 3px 1px #777,0 8px 16px #000;
+}
+.logo-mockup:after{
+    content:"LOGO DESIGN";position:absolute;left:50%;top:70%;transform:translateX(-50%);
+    color:#777;font-size:9px;letter-spacing:4px;
+}
+.card-mockup .card-sheet{
+    position:absolute;width:210px;height:112px;border-radius:5px;box-shadow:0 20px 35px #000;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;letter-spacing:2px;
+}
+.card-mockup .front{
+    left:17%;top:23%;background:#e9e9e9;color:#111;transform:rotate(-8deg);
+}
+.card-mockup .back{
+    right:14%;top:27%;background:#171717;color:#cfff00;transform:rotate(7deg);
+}
+.print-mockup:before{
+    content:"MENU";position:absolute;left:20%;top:18%;width:150px;height:125px;
+    background:linear-gradient(135deg,#eee,#aaa);color:#111;display:flex;align-items:center;justify-content:center;
+    font-size:25px;font-weight:900;transform:rotate(-7deg);box-shadow:0 20px 35px #000;
+}
+.print-mockup:after{
+    content:"PRINT DESIGN";position:absolute;right:15%;top:28%;width:150px;height:100px;
+    background:#1b1b1b;color:#cfff00;display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:900;letter-spacing:2px;transform:rotate(7deg);box-shadow:0 20px 35px #000;
+}
+
+/* ================= CONTACT UPGRADE ================= */
+.contact-links{
+    display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px auto 35px;
+}
+.contact-chip{
+    padding:15px 20px;background:#111;border:1px solid #252525;color:#ddd;font-size:13px;
+    transition:.3s;
+}
+.contact-chip:hover{border-color:#cfff00;color:#cfff00;}
+.whatsapp-float{
+    position:fixed;right:24px;bottom:24px;z-index:4000;width:58px;height:58px;border-radius:50%;
+    background:#25D366;color:white;display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:25px;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:.3s;
+}
+.whatsapp-float:hover{transform:translateY(-4px) scale(1.04);}
+.whatsapp-float span{font-size:0;}
+.whatsapp-float:before{content:"WA";font-size:15px;letter-spacing:-1px;}
+
+@media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-portrait{margin:20px auto 0;max-width:430px;}
+    .project-categories{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+    .hero-portrait img{height:520px;}
+    .hero-portrait .portrait-tag{left:10px;}
+    .exp-item{padding-left:55px;}
+    .project-card{padding:22px;}
+    .card-mockup .card-sheet{width:160px;height:90px;}
+    .card-mockup .front{left:8%;}
+    .card-mockup .back{right:7%;}
+    .whatsapp-float{right:16px;bottom:16px;width:52px;height:52px;}
+}
+
 </style>
 </head>
 
@@ -589,6 +734,7 @@ footer{
 <ul class="nav-links">
 <li><a href="#home">HOME</a></li>
 <li><a href="#about">ABOUT</a></li>
+<li><a href="#experience">EXPERIENCE</a></li>
 <li><a href="#services">SERVICES</a></li>
 <li><a href="#work">WORK</a></li>
 <li><a href="#contact">CONTACT</a></li>
@@ -601,37 +747,24 @@ footer{
 <!-- HERO -->
 
 <section class="hero" id="home">
-
 <div class="hero-inner">
-
-<div class="eyebrow">GRAPHIC DESIGNER • PHOTO EDITOR</div>
-
-<h1>
-SUBIN
-<span>KRISHNAN</span>
-</h1>
-
-<p class="hero-description">
-Professional Graphic Designer & Photo Editor based in Dubai,
-creating powerful visual identities, advertising designs,
-social media creatives and professional image retouching.
-</p>
-
-<div class="buttons">
-
-<a href="#work" class="btn btn-fill">
-VIEW MY WORK
-</a>
-
-<a href="Subin Krishnan CV.pdf"
-class="btn"
-target="_blank"
-download>
-DOWNLOAD CV
-</a>
-
-</div>
-
+    <div class="hero-copy">
+        <div class="eyebrow">GRAPHIC DESIGNER • PHOTO EDITOR</div>
+        <h1>SUBIN<span>KRISHNAN</span></h1>
+        <p class="hero-description">
+        Professional Graphic Designer & Photo Editor based in Dubai,
+        creating powerful visual identities, advertising designs,
+        social media creatives and professional image retouching.
+        </p>
+        <div class="buttons">
+            <a href="#work" class="btn btn-fill">VIEW MY WORK</a>
+            <a href="Subin Krishnan CV.pdf" class="btn" target="_blank" download>DOWNLOAD CV</a>
+        </div>
+    </div>
+    <div class="hero-portrait">
+        <img src="Profile.jpg" alt="Subin Krishnan">
+        <div class="portrait-tag">DUBAI • UAE</div>
+    </div>
 </div>
 </section>
 
@@ -639,70 +772,61 @@ DOWNLOAD CV
 <!-- ABOUT -->
 
 <section class="about" id="about">
-
 <div class="container">
-
-<div class="section-label">01 / ABOUT ME</div>
-
-<div class="about-grid">
-
-<div class="profile-wrap">
-<img src="Profile.jpg" alt="Subin Krishnan">
+    <div class="section-label">01 / ABOUT ME</div>
+    <div class="about-text" style="max-width:1000px">
+        <h2>CREATIVE <span>VISION.</span><br>PRECISE EXECUTION.</h2>
+        <p>
+        I'm Subin Krishnan, a professional Graphic Designer and Photo Editor based in Dubai, UAE.
+        I create visually engaging designs that combine strong concepts, typography, colour and professional image editing.
+        </p>
+        <p>
+        My work includes social media advertising, product advertisements, branding materials,
+        print design and high-quality photo retouching, with a focus on clean visual communication.
+        </p>
+        <div class="about-details">
+            <div class="detail"><small>LOCATION</small><strong>Dubai, UAE</strong></div>
+            <div class="detail"><small>SPECIALITY</small><strong>Graphic Design</strong></div>
+            <div class="detail"><small>EXPERTISE</small><strong>Photo Editing</strong></div>
+            <div class="detail"><small>AVAILABLE FOR</small><strong>Creative Projects</strong></div>
+        </div>
+        <a href="Subin Krishnan CV.pdf" target="_blank" class="btn">VIEW MY CV</a>
+    </div>
 </div>
-
-<div class="about-text">
-
-<h2>CREATIVE <span>VISION.</span><br>PRECISE EXECUTION.</h2>
-
-<p>
-I'm Subin Krishnan, a professional Graphic Designer and Photo Editor
-based in Dubai, UAE. I create visually engaging designs that combine
-strong concepts, typography, colour and professional image editing.
-</p>
-
-<p>
-My work includes social media advertising, product advertisements,
-branding materials, print design and high-quality photo retouching.
-I focus on clean visual communication and designs that make brands
-stand out.
-</p>
-
-<div class="about-details">
-
-<div class="detail">
-<small>LOCATION</small>
-<strong>Dubai, UAE</strong>
-</div>
-
-<div class="detail">
-<small>SPECIALITY</small>
-<strong>Graphic Design</strong>
-</div>
-
-<div class="detail">
-<small>EXPERTISE</small>
-<strong>Photo Editing</strong>
-</div>
-
-<div class="detail">
-<small>AVAILABLE FOR</small>
-<strong>Creative Projects</strong>
-</div>
-
-</div>
-
-<a href="Subin Krishnan CV.pdf"
-target="_blank"
-class="btn">
-VIEW MY CV
-</a>
-
-</div>
-</div>
-</div>
-
 </section>
 
+
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+<div class="container">
+    <div class="section-label">02 / EXPERIENCE</div>
+    <h2 class="section-title">EXPERIENCE.</h2>
+    <div class="timeline">
+        <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-period">JAN 2023 — PRESENT</div>
+            <h3>Graphic Designer</h3>
+            <div class="exp-company">Flash Digital Studio • Dubai, UAE</div>
+            <p>Graphic design, professional photo editing, advertising creatives, print materials and visual content for studio and client projects.</p>
+        </div>
+        <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-period">JAN 2015 — DEC 2023</div>
+            <h3>Graphic Designer, Photographer & Printer</h3>
+            <div class="exp-company">Aswathy Photo Plus & Lasser Colour Lab • India</div>
+            <p>Photography, graphic design, photo retouching, print production and customer-focused creative services.</p>
+        </div>
+        <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-period">JAN 2013 — DEC 2014</div>
+            <h3>Accountant & Billing Operator</h3>
+            <div class="exp-company">Wahat Al Batna Automobile Garage • Oman</div>
+            <p>Handled accounting support, billing operations and day-to-day administrative documentation.</p>
+        </div>
+    </div>
+</div>
+</section>
 
 <!-- SERVICES -->
 
@@ -710,7 +834,7 @@ VIEW MY CV
 
 <div class="container">
 
-<div class="section-label">02 / WHAT I DO</div>
+<div class="section-label">03 / WHAT I DO</div>
 <h2 class="section-title">SERVICES.</h2>
 
 <div class="services-grid">
@@ -762,7 +886,7 @@ VIEW MY CV
 
 <div class="container">
 
-<div class="section-label">03 / SELECTED WORK</div>
+<div class="section-label">04 / SELECTED WORK</div>
 <h2 class="section-title">PORTFOLIO.</h2>
 
 <div class="filters">
@@ -781,6 +905,14 @@ ADVERTISING
 
 <button class="filter-btn" onclick="filterWork('retouch',this)">
 RETOUCHING
+</button>
+
+<button class="filter-btn" onclick="filterWork('branding',this)">
+BRANDING
+</button>
+
+<button class="filter-btn" onclick="filterWork('print',this)">
+PRINT DESIGN
 </button>
 
 </div>
@@ -993,33 +1125,45 @@ onclick="openLightbox('shawarma-ad.jpg')">
 </div>
 
 
-<!-- PDF WORK -->
+<!-- BRANDING / PRINT PROJECTS -->
+<div class="project-categories">
 
-<div class="pdf-projects">
+    <div class="project-card branding filter-project">
+        <div>
+            <small>BRANDING / LOGO</small>
+            <h3>PH Logo Design</h3>
+            <p>Logo work presented in a dimensional mockup-style environment for a stronger portfolio presentation.</p>
+        </div>
+        <div class="mockup-stage logo-mockup"></div>
+        <a href="PH LOGO copy.pdf" target="_blank">VIEW ORIGINAL PROJECT →</a>
+    </div>
 
-<div class="pdf-card">
-<small>PRINT DESIGN</small>
-<h3>Menu Design</h3>
-<a href="Menu Design.pdf" target="_blank">VIEW PROJECT →</a>
-</div>
+    <div class="project-card print filter-project">
+        <div>
+            <small>BUSINESS CARD / PRINT</small>
+            <h3>Business Card Mockup</h3>
+            <p>Business card designs presented as realistic layered cards instead of plain PDF links.</p>
+        </div>
+        <div class="mockup-stage card-mockup">
+            <div class="card-sheet front">BUSINESS CARD</div>
+            <div class="card-sheet back">SUBIN • DESIGN</div>
+        </div>
+        <div>
+            <a href="business card A.pdf" target="_blank">CARD A →</a>
+            &nbsp;&nbsp;
+            <a href="business card b.pdf" target="_blank">CARD B →</a>
+        </div>
+    </div>
 
-<div class="pdf-card">
-<small>BRANDING</small>
-<h3>Logo Design</h3>
-<a href="PH LOGO copy.pdf" target="_blank">VIEW PROJECT →</a>
-</div>
-
-<div class="pdf-card">
-<small>PRINT DESIGN</small>
-<h3>Business Card A</h3>
-<a href="business card A.pdf" target="_blank">VIEW PROJECT →</a>
-</div>
-
-<div class="pdf-card">
-<small>PRINT DESIGN</small>
-<h3>Business Card B</h3>
-<a href="business card b.pdf" target="_blank">VIEW PROJECT →</a>
-</div>
+    <div class="project-card print filter-project">
+        <div>
+            <small>PRINT DESIGN</small>
+            <h3>Menu Design</h3>
+            <p>Print-focused layout work presented in a clean editorial mockup-style composition.</p>
+        </div>
+        <div class="mockup-stage print-mockup"></div>
+        <a href="Menu Design.pdf" target="_blank">VIEW ORIGINAL PROJECT →</a>
+    </div>
 
 </div>
 
@@ -1030,27 +1174,24 @@ onclick="openLightbox('shawarma-ad.jpg')">
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
-
 <div class="container">
+    <div class="section-label">05 / CONTACT</div>
+    <h2>LET'S CREATE<br><span>SOMETHING GREAT.</span></h2>
+    <p>
+    Available for graphic design, photo editing, advertising, branding and creative projects in Dubai and beyond.
+    </p>
 
-<div class="section-label">04 / CONTACT</div>
+    <div class="contact-links">
+        <a class="contact-chip" href="tel:+971543484963">☎ +971 54 348 4963</a>
+        <a class="contact-chip" href="mailto:subinslm@gmail.com">✉ subinslm@gmail.com</a>
+        <a class="contact-chip" href="https://wa.me/971543484963" target="_blank">WHATSAPP</a>
+        <span class="contact-chip">Dubai, UAE</span>
+    </div>
 
-<h2>
-LET'S CREATE<br>
-<span>SOMETHING GREAT.</span>
-</h2>
-
-<p>
-Available for graphic design, photo editing, advertising,
-branding and creative projects in Dubai and beyond.
-</p>
-
-<a href="Subin Krishnan CV.pdf"
-target="_blank"
-class="btn btn-fill">
-VIEW MY CV
-</a>
-
+    <div class="buttons" style="justify-content:center">
+        <a href="https://wa.me/971543484963" target="_blank" class="btn btn-fill">MESSAGE ON WHATSAPP</a>
+        <a href="Subin Krishnan CV.pdf" target="_blank" class="btn">VIEW MY CV</a>
+    </div>
 </div>
 </section>
 
@@ -1067,6 +1208,8 @@ VIEW MY CV
 
 </footer>
 
+
+<a class="whatsapp-float" href="https://wa.me/971543484963" target="_blank" aria-label="WhatsApp Subin"><span>WhatsApp</span></a>
 
 <!-- LIGHTBOX -->
 
@@ -1085,7 +1228,7 @@ VIEW MY CV
 
 function filterWork(category,button){
 
-const items=document.querySelectorAll('.gallery-item');
+const items=document.querySelectorAll('.gallery-item, .filter-project');
 const buttons=document.querySelectorAll('.filter-btn');
 
 buttons.forEach(btn=>btn.classList.remove('active'));
