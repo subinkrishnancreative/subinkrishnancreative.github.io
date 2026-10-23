@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Subin Krishnan | Graphic Designer & Photo Editor</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#fff;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:70px;
+    padding:0 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid #151515;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#c8ff00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:32px;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c8ff00;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:130px 7% 80px;
+    background:
+    radial-gradient(circle at 75% 40%,#252525 0%,#111 30%,#080808 60%);
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.eyebrow{
+    color:#c8ff00;
+    font-size:13px;
+    letter-spacing:6px;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-size:clamp(70px,10vw,145px);
+    line-height:.82;
+    letter-spacing:-6px;
+}
+
+.outline{
+    color:transparent;
+    -webkit-text-stroke:1px #666;
+}
+
+.hero-text{
+    max-width:650px;
+    color:#aaa;
+    font-size:18px;
+    line-height:1.8;
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 30px;
+    border:1px solid #c8ff00;
+    color:#c8ff00;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#c8ff00;
+    color:#000;
+}
+
+
+/* GENERAL */
+
+section{
+    padding:120px 7%;
+}
+
+.label{
+    color:#c8ff00;
+    font-size:12px;
+    letter-spacing:4px;
+    margin-bottom:18px;
+}
+
+.title{
+    font-size:clamp(45px,6vw,80px);
+    line-height:1;
+    margin-bottom:55px;
+}
+
+
+/* ABOUT */
+
+.about{
+    background:#101010;
+}
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+}
+
+.about-text{
+    color:#aaa;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.skill{
+    padding:22px;
+    border:1px solid #292929;
+    color:#bbb;
+}
+
+.skill span{
+    color:#c8ff00;
+    margin-right:10px;
+}
+
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    border:1px solid #292929;
+    padding:40px 30px;
+    min-height:260px;
+    transition:.35s;
+}
+
+.service:hover{
+    border-color:#c8ff00;
+    transform:translateY(-7px);
+}
+
+.service-number{
+    color:#c8ff00;
+    font-size:12px;
+    margin-bottom:55px;
+}
+
+.service h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.service p{
+    color:#777;
+    line-height:1.7;
+}
+
+
+/* PORTFOLIO */
+
+.work{
+    background:#101010;
+}
+
+.work-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.work-header .title{
+    margin-bottom:0;
+}
+
+.work-intro{
+    color:#777;
+    max-width:400px;
+    line-height:1.7;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    background:#181818;
+    cursor:pointer;
+    min-height:500px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    object-fit:cover;
+    display:block;
+    transition:transform .6s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.04);
+}
+
+.overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:70px 30px 28px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+    opacity:0;
+    transition:.3s;
+}
+
+.gallery-item:hover .overlay{
+    opacity:1;
+}
+
+.overlay span{
+    color:#c8ff00;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.overlay h3{
+    font-size:25px;
+    margin-top:8px;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:5000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.96);
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    padding:160px 7%;
+}
+
+.contact h2{
+    font-size:clamp(50px,8vw,105px);
+    line-height:.9;
+}
+
+.contact p{
+    color:#888;
+    margin-top:30px;
+    font-size:17px;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:30px 7%;
+    border-top:1px solid #222;
+    color:#666;
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .about-wrapper,
+    .services-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .work-header{
+        display:block;
+    }
+
+    .work-intro{
+        margin-top:25px;
+    }
+
+    .gallery-item,
+    .gallery-item img{
+        min-height:350px;
+    }
+
+    footer{
+        display:block;
+        text-align:center;
+        line-height:2;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+SUBIN<span>.</span>
+</div>
+
+<ul>
+<li><a href="#home">HOME</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#work">WORK</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+GRAPHIC DESIGNER • PHOTO EDITOR
+</div>
+
+<h1>
+SUBIN<br>
+<span class="outline">KRISHNAN</span>
+</h1>
+
+<p class="hero-text">
+Graphic Designer & Photo Editor based in Dubai, creating
+bold visual identities, advertising creatives, social media
+designs and professional image editing.
+</p>
+
+<a href="#work" class="btn">
+VIEW MY WORK
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="label">01 / ABOUT ME</div>
+
+<h2 class="title">
+Creative thinking.<br>
+Visual impact.
+</h2>
+
+<div class="about-wrapper">
+
+<div class="about-text">
+
+<p>
+I'm Subin Krishnan, a Graphic Designer and Photo Editor
+based in Dubai. I create visually engaging designs for
+brands, businesses and digital platforms.
+</p>
+
+<br>
+
+<p>
+My work combines creative composition, typography,
+image manipulation and professional photo editing to
+produce clean and impactful visual communication.
+</p>
+
+</div>
+
+
+<div class="skills">
+
+<div class="skill"><span>01</span> Adobe Photoshop</div>
+<div class="skill"><span>02</span> Adobe Illustrator</div>
+<div class="skill"><span>03</span> Adobe InDesign</div>
+<div class="skill"><span>04</span> Photo Retouching</div>
+<div class="skill"><span>05</span> Social Media Design</div>
+<div class="skill"><span>06</span> Advertising Design</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="label">02 / SERVICES</div>
+
+<h2 class="title">
+What I Do
+</h2>
+
+
+<div class="services-grid">
+
+<div class="service">
+
+<div class="service-number">01</div>
+
+<h3>Graphic Design</h3>
+
+<p>
+Creative advertising, posters, promotional artwork,
+business materials and professional digital designs.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02</div>
+
+<h3>Social Media Design</h3>
+
+<p>
+Engaging promotional posts and campaign creatives
+designed for businesses and social media platforms.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Photo Editing</h3>
+
+<p>
+Professional retouching, image enhancement,
+background editing, restoration and creative
+photo manipulation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PORTFOLIO -->
+
+<section class="work" id="work">
+
+<div class="label">03 / SELECTED WORK</div>
+
+
+<div class="work-header">
+
+<h2 class="title">
+My Portfolio
+</h2>
+
+<p class="work-intro">
+A selection of graphic design, advertising,
+product and social media creative projects.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<!-- BLUE LAGOON -->
+
+<div class="gallery-item"
+onclick="openLightbox('blue-lagoon.jpg')">
+
+<img src="blue-lagoon.jpg"
+alt="Blue Lagoon Drink Advertisement">
+
+<div class="overlay">
+
+<span>ADVERTISING DESIGN</span>
+
+<h3>Blue Lagoon</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- BOSS -->
+
+<div class="gallery-item"
+onclick="openLightbox('boss-shoes.jpg')">
+
+<img src="boss-shoes.jpg"
+alt="Boss Shoes Advertising Design">
+
+<div class="overlay">
+
+<span>PRODUCT ADVERTISING</span>
+
+<h3>Boss Footwear</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- SHOE -->
+
+<div class="gallery-item"
+onclick="openLightbox('Shoe Ad.jpg')">
+
+<img src="Shoe Ad.jpg"
+alt="Footwear Poster Design">
+
+<div class="overlay">
+
+<span>CREATIVE POSTER</span>
+
+<h3>Footwear Campaign</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- SHAWARMA -->
+
+<div class="gallery-item"
+onclick="openLightbox('shawarma-ad.jpg')">
+
+<img src="shawarma-ad.jpg"
+alt="Restaurant Social Media Advertisement">
+
+<div class="overlay">
+
+<span>SOCIAL MEDIA DESIGN</span>
+
+<h3>Food Promotion</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="label">04 / CONTACT</div>
+
+<h2>
+LET'S CREATE<br>
+SOMETHING GREAT.
+</h2>
+
+<p>
+Available for graphic design, photo editing
+and creative projects in Dubai.
+</p>
+
+</section>
+
+
+
+<footer>
+
+<div>
+© 2026 SUBIN KRISHNAN
+</div>
+
+<div>
+GRAPHIC DESIGNER • PHOTO EDITOR
+</div>
+
+</footer>
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close" onclick="closeLightbox()">
+&times;
+</span>
+
+<img id="lightbox-img" src="" alt="Portfolio Preview">
+
+</div>
+
+
+
+<script>
+
+function openLightbox(image){
+
+document.getElementById("lightbox-img").src=image;
+
+document.getElementById("lightbox").classList.add("active");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeLightbox(){
+
+document.getElementById("lightbox").classList.remove("active");
+
+document.body.style.overflow="auto";
+
+}
+
+
+document.getElementById("lightbox").addEventListener("click",function(e){
+
+if(e.target === this){
+
+closeLightbox();
+
+}
+
+});
+
+
+document.addEventListener("keydown",function(e){
+
+if(e.key === "Escape"){
+
+closeLightbox();
+
+}
+
+});
+
+</script>
+
+
+</body>
+</html>
